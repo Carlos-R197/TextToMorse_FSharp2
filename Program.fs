@@ -25,6 +25,7 @@ module KataProblem =
     let text_to_morse sequence =
         let mutable morse_text = ""
         for character in sequence do
-            let morse_translation = dict.[character]
-            morse_text <- morse_text + morse_translation
-        morse_text
+            let morse_translation = dict.[System.Char.ToUpper character]
+            morse_text <- morse_text + morse_translation + " "
+            
+        morse_text.TrimEnd()
