@@ -13,5 +13,9 @@ let one_letter_test () =
     Assert.Equal("-.-.", text_to_morse("C"))
 
 [<Fact>]
-let full_name_test () =
+let name_test () =
     Assert.Equal("-.-. .- .-. .-.. --- ...", text_to_morse("Carlos"))
+
+[<Fact>]
+let full_name_test () =
+    Assert.Equal("-.-. .- .-. .-.. --- ... / .-. --- --.- ..- .", text_to_morse("Carlos Roque"))
